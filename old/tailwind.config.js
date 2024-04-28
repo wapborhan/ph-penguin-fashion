@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {},
-
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -11,9 +10,9 @@ export default {
       limeb: {
         100: "#cffafe",
         200: "#a5f3fc",
-        300: "#bef264",
+        300: "#67e8f9",
         400: "#22d3ee",
-        500: "#84cc16",
+        500: "#06b6d4",
         600: "#0891b2",
         700: "#0e7490",
         800: "#155e75",
@@ -22,6 +21,8 @@ export default {
       // ...
     },
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require("daisyui")],
+  plugins: [],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
 };
